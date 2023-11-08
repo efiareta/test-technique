@@ -1,8 +1,9 @@
 export interface Modele {
-  dateCreation: string;
-  miniature: string;
+  id: string;
+  date: string;
   name: string;
   author: string;
-  nbPolygon: number;
+  polygons: number;
+  modelName: string;
   description?: string;
 }

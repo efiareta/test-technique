@@ -1,5 +1,5 @@
 <h3>Ajouter un modèle 3D</h3>
-<form [formGroup]="modele3dform" (ngSubmit)="onSubmit()">
+<form [formGroup]="modeleForm" (ngSubmit)="onSubmit()">
   <mat-list>
     <mat-list-item>
       <mat-form-field>
@@ -44,7 +44,7 @@
       type="submit"
       mat-button
       color="primary"
-      [disabled]="!modele3dform.valid"
+      [disabled]="!modeleForm.valid"
     >
       Ajouter
     </button>
