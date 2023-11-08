@@ -8,7 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TupleLabelValue } from '../types/form';
-import { AddModeleService } from './add-modele3d.service';
+import { AddModeleService } from '../services/add-modele3d.service';
 /**
  * @title Dialog Animations
  */
