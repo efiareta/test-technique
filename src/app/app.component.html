@@ -1,0 +1,21 @@
+<mat-toolbar style="margin-bottom: 5px">
+  <span>Modèles 3D</span>
+  <button mat-icon-button class="icon-toolbar-right add-icon">
+    <mat-icon (click)="openDialogAddModele()">add</mat-icon>
+  </button>
+</mat-toolbar>
+<div
+  class="topLevel"
+  style="height: calc(100% - 65px); width: 25vw; overflow: auto"
+>
+  <app-master
+    [modeles]="modeles$ | async"
+    (showDetailModele)="getDetailModeleById($event)"
+  ></app-master>
+</div>
+<div
+  class="topLevel"
+  style="height: calc(100% - 65px); width: calc(100% - 27vw); margin-left: 20px"
+>
+  <app-detail [modele]="modelebyId$ | async"></app-detail>
+</div>

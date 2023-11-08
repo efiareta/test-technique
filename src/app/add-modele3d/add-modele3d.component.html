@@ -1,0 +1,52 @@
+<h3>Ajouter un modèle 3D</h3>
+<form [formGroup]="modele3dform" (ngSubmit)="onSubmit()">
+  <mat-list>
+    <mat-list-item>
+      <mat-form-field>
+        <mat-label>Nom du modèle</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-form-field>
+        <mat-label>Auteur</mat-label>
+        <input matInput formControlName="author" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-form-field>
+        <mat-label>Nom du Fichier</mat-label>
+
+        <mat-select formControlName="modelName">
+          <mat-option
+            *ngFor="let filename of filenameList"
+            [value]="filename.value"
+          >
+            {{ filename.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-form-field>
+        <mat-label>Nombre de polygones</mat-label>
+        <input matInput formControlName="polygonNumber" />
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" />
+      </mat-form-field>
+    </mat-list-item>
+    <button
+      class="submitButton"
+      type="submit"
+      mat-button
+      color="primary"
+      [disabled]="!modele3dform.valid"
+    >
+      Ajouter
+    </button>
+  </mat-list>
+</form>

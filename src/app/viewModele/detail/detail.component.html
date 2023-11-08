@@ -1,0 +1,26 @@
+<div *ngIf="modele !== null">
+  <mat-card style="border: 0.5px solid">
+    <mat-card-header>
+      <mat-card-title
+        >{{ modele?.name
+        }}<span class="headerForceRightPosition">{{
+          modele?.author
+        }}</span></mat-card-title
+      >
+    </mat-card-header>
+    <mat-card-content style="text-align: center">
+      <img
+        mat-card-image
+        src="assets/png/{{ modele?.modelName }}.png"
+        class="miniature"
+        alt="Photo de profil"
+      />
+      <div class="textContainer">
+        <p><strong>Publiée le: </strong> {{ modele?.date | customDate }}</p>
+        <p><strong>Nombre de polygones: </strong> {{ modele?.polygons }}</p>
+        <p><strong>Description: </strong>{{ modele?.description }}</p>
+      </div>
+    </mat-card-content>
+    <mat-card-footer></mat-card-footer>
+  </mat-card>
+</div>
