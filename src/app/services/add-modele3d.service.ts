@@ -12,7 +12,7 @@ export class AddModeleService {
       name: new FormControl('', [Validators.required]),
       modelName: new FormControl('', [Validators.required]),
       author: new FormControl('', [Validators.required]),
-      polygonNumber: new FormControl('', [Validators.required]),
+      polygonNumber: new FormControl<number>(0, [Validators.required]),
       description: new FormControl(''),
     });
   }
