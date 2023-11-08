@@ -64,7 +64,7 @@ export class AppComponent implements OnInit {
 
     dialogRef.componentInstance.submitClicked.subscribe((aModele: Modele) => {
       this.addNewModel(aModele);
-      dialogRef?.close();
+      dialogRef.close();
     });
   }
 }
