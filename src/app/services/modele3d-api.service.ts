@@ -6,7 +6,7 @@ import { Modele } from '../types/modele';
   providedIn: 'root',
 })
 export class Modele3dApiService {
-  apiBaseUrl: string = 'http://localhost:3333';
+  apiBaseUrl = 'http://localhost:3333';
   constructor(private httpRequester: HttpClient) {}
   getAllModele3D(): Observable<Modele[]> {
     return this.httpRequester.get<Modele[]>(`${this.apiBaseUrl}/api/models`);

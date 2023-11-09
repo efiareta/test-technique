@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Modele3dApiService } from './services/modele3d-api.service';
-import { MasterComponent } from './viewModele/master/master.component';
+import { MasterComponent } from './view/master/master.component';
 import { Observable, of } from 'rxjs';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { DetailComponent } from './viewModele/detail/detail.component';
+import { DetailComponent } from './view/detail/detail.component';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
-import { AddModele3dComponent } from './add-modele3d/add-modele3d.component';
+import { AddModele3dComponent } from './view/add-modele3d/add-modele3d.component';
 import { Modele } from './types/modele';
 
 @Component({
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
   modeles$: Observable<Modele[]> = of([]);
   modelebyId$: Observable<Modele> | undefined;
 
-  title = 'modele3dApp';
+  title = 'Modèles 3D';
 
   constructor(
     public dialog: MatDialog,
